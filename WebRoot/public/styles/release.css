@@ -1,0 +1,13 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+}
+#container{
+	width: 200px;
+	height: 100px;
+	border: 1px solid;
+	margin: 100px auto;
+	padding-top:30px;
+	text-align: center;
+}

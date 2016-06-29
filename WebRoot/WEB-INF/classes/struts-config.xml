@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="loginaction" type="com.gui.form.LoginActionForm" />
+		<form-bean name="registerActionForm" type="com.gui.form.RegisterActionForm" />
+		<form-bean name="InfoReleaseActionForm" type="com.gui.form.InfoReleaseActionForm" />
+	</form-beans>
+	<!-- 全局转发 -->
+	<global-forwards>
+		<forward name="defaulterror" path="/public/defaulterror.jsp"></forward>
+		<forward name="login" path="/WEB-INF/jsp/login.jsp"></forward>
+	</global-forwards>
+
+	<action-mappings>
+		<action path="/LoginAction" type="com.gui.action.LoginAction"
+			name="loginaction" scope="request">
+			<forward name="success" path="/WEB-INF/jsp/success.jsp" />
+			<forward name="error" path="/WEB-INF/jsp/login.jsp" />
+		</action>
+		<action path="/RegisterAction" type="com.gui.action.RegisterAction"
+			name="registerActionForm" scope="request">
+			<forward name="success" path="/WEB-INF/jsp/login.jsp" />
+			<forward name="error" path="/WEB-INF/jsp/register.jsp" />
+		</action>
+
+		<action path="/InfoReleaseAction" name="InfoReleaseActionForm"
+			type="com.gui.action.InfoReleaseAction" scope="request">
+			<forward name="success" path="/WEB-INF/jsp/InfoReleaseSuccess.jsp" />
+		</action>
+		
+		
+		
+		
+		
+		<action path="/Login" type="com.gui.forward.Login" scope="request">
+			<forward name="login" path="/WEB-INF/jsp/login.jsp" />
+		</action>
+
+		<action path="/index" type="com.gui.forward.Index" scope="request">
+			<forward name="index" path="/WEB-INF/jsp/index.jsp" />
+		</action>
+
+		<action path="/Register" type="com.gui.forward.Register" scope="request">
+			<forward name="register" path="/WEB-INF/jsp/register.jsp" />
+		</action>
+
+		<action path="/InfoRelease" type="com.gui.forward.InfoRelease"
+			scope="request">
+			<forward name="inforelease" path="/WEB-INF/jsp/InfoRelease.jsp" />
+		</action>
+
+		<action path="/Infos" type="com.gui.forward.Infos" scope="request">
+			<forward name="success" path="/WEB-INF/jsp/Infos.jsp" />
+		</action>
+
+		<action path="/MyInfos" type="com.gui.forward.MyInfos" scope="request">
+			<forward name="success" path="/WEB-INF/jsp/myinfos.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

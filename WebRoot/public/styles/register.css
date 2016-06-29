@@ -1,0 +1,63 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#container{
+	width:600px;
+	height:auto;
+	margin:100px auto;
+	//background: #999999;
+	border: solid 1px; 
+}
+
+#container  p{
+	width:600px;
+	height:30px;
+	line-height:30px;
+	background:#33eeee;
+	display: inline-block;
+	text-align: center;
+}
+
+#container form{
+
+ //  background:aqua;
+	width:600px;
+	height:auto;
+	margin-left:150px;
+	margin-bottom:50px;: 
+}
+#container form dd{
+	margin-top: 15px;
+}
+
+#container p{
+	line-height:30px;
+	background:#33eeee;
+}
+
+#register{
+	width:300px;
+	margin-bottom: 10px;
+}
+#submit:HOVER{
+	background:#33eeee;
+}
+#headIMG{
+	width: 100px;
+	height: 100px;
+}
+.error_msg{
+	font-size: 12px;
+	color: red;
+}
+
+.mes_error{
+ color: red;
+ font-size: 11px;
+}
+.mes_ok{
+ color: green;
+  font-size: 16px;
+}
