@@ -35,22 +35,22 @@ public class RegisterAction extends Action {
 	private String validateForm(RegisterActionForm registerActionForm,
 			HttpServletRequest request) {
 		
-		String userName = registerActionForm.getUserName().equals("") ? null
+		String userName = "".equals(registerActionForm.getUserName())? null
 				: registerActionForm.getUserName();
 
-		String passWord = registerActionForm.getPassWord().equals("") ? null
+		String passWord = "".equals(registerActionForm.getPassWord()) ? null
 				: registerActionForm.getPassWord();
 
-		String notPassword = registerActionForm.getNotPassword().equals("") ? null
+		String notPassword = "".equals(registerActionForm.getNotPassword()) ? null
 				: registerActionForm.getNotPassword();
 
 		// String sex = new
 		// String(registerActionForm.getSex().getBytes("iso-8859-1"),"utf-8");
 
-		String sex = registerActionForm.getSex().equals("") ? null
+		String sex = "".equals(registerActionForm.getSex()) ? null
 				: registerActionForm.getSex();
 
-		String code = registerActionForm.getCode().equals("") ? null
+		String code = "".equals(registerActionForm.getCode()) ? null
 				: registerActionForm.getCode();
 
 		String session_code = (String) request.getSession()

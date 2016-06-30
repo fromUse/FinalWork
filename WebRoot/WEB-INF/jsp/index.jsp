@@ -26,7 +26,7 @@
 
 <body>
 	<div id="container">
-		<div id="title"><span>话题</span></div>
+		<div id="title"><span>话题广场</span></div>
 		<div id="list">
 			<ul>
 				<c:forEach var="a" items="${infolist }">
@@ -34,7 +34,7 @@
 				</c:forEach>
 			</ul>
 		</div>
-					<a href="InfoRelease.html" id="release"> >>>没有话题？去发布吧</a>
+					<a href="InfoRelease.html" id="release"> >>>没有话题？点这里发布</a>
 	</div>
 </body>
 </html>

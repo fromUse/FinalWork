@@ -9,26 +9,22 @@ window.onload = function() {
 	
 	
 	$('#send').bind('click',function(){
+		
+		checkTitle();
+		checkContent();
+		
 		if(!flag){
 			alert('标题不少于1个字符');
 		}else{
 			if(!contentFlag){
 				alert('内容不少于15个字符');
 			}else{
-				alert('ssssssss');
 				$('#inforelease').submit();
 			}
 		}
 		
 	});
 	
-	$('#h').bind('keyup',function(){
-		checkTitle() ;
-	});
-	
-	$('#content').bind('keyup',function(){
-		checkContent() ;
-	});
 	
 	//开发时间紧张,粗滤验证.....
 	function checkTitle() {

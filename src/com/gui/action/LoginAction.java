@@ -66,14 +66,28 @@ public class LoginAction extends Action {
 			System.out.println("登陆成功......");
 				request.getSession().setAttribute("userName", name);
 				//当上下文url不为空时，跳转回上一个网址
+				
+				
 				String refer = request.getHeader("REFERER");
+				System.out.println("上下文   --------"+refer);
+				if(refer.matches(".*RegisterAction.html")){
+					
+					int end = refer.lastIndexOf("/");
+					refer  = 	refer.substring(0, end);
+				}
+				
+				
+				
 				if(refer!=null &&  !refer.equals("")){
 					 try {
 						response.sendRedirect(refer);
+						return null;
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
 				}
+				
+				
 				
 			return "success";
 		} else {
@@ -90,7 +104,7 @@ public class LoginAction extends Action {
 
 			//request.getSession().setAttribute("userName", name);
 			// 当表单验证通过就返回 error 页面 告诉框架并跳转到相关的失败页面
-			return "error";
+			return "login";
 		}
 	}
 }

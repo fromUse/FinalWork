@@ -21,10 +21,22 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
+<script type="text/javascript">
+	var t = 3; // 设定跳转的时间
+	setInterval("refer()", 1000); // 启动1秒定时
+	function refer() {
+		if (t == 0) {
+			location = "index.html"; // 设定跳转的链接地址
+		}
+		document.getElementById('show').innerHTML = "<span style='color:red'>" + t + "</span>"; // 显示倒计时
+		t--; // 计数器递减
+	}
+</script>
   </head>
   
   <body>
-    500错误背锅页面,服务器端发生错误 <br>
+    500错误背锅页面,发生未知错误 <br>
+    
+    <p id="show"></p>
   </body>
 </html:html>

@@ -11,13 +11,13 @@
 	<global-forwards>
 		<forward name="defaulterror" path="/public/defaulterror.jsp"></forward>
 		<forward name="login" path="/WEB-INF/jsp/login.jsp"></forward>
+		<forward name="index" path="/WEB-INF/jsp/index.jsp"></forward>
 	</global-forwards>
 
 	<action-mappings>
 		<action path="/LoginAction" type="com.gui.action.LoginAction"
 			name="loginaction" scope="request">
 			<forward name="success" path="/WEB-INF/jsp/success.jsp" />
-			<forward name="error" path="/WEB-INF/jsp/login.jsp" />
 		</action>
 		<action path="/RegisterAction" type="com.gui.action.RegisterAction"
 			name="registerActionForm" scope="request">
@@ -29,7 +29,11 @@
 			type="com.gui.action.InfoReleaseAction" scope="request">
 			<forward name="success" path="/WEB-INF/jsp/InfoReleaseSuccess.jsp" />
 		</action>
-		
+
+		<action path="/InfoUpdateAction" name="InfoReleaseActionForm"
+			type="com.gui.action.InfoUpdateAction" scope="request">
+			<forward name="success" path="/WEB-INF/jsp/InfoReleaseSuccess.jsp" />
+		</action>
 		
 		
 		
@@ -57,6 +61,16 @@
 
 		<action path="/MyInfos" type="com.gui.forward.MyInfos" scope="request">
 			<forward name="success" path="/WEB-INF/jsp/myinfos.jsp" />
+		</action>
+		
+			<action path="/InfosUpdate" type="com.gui.forward.InfoUpdate" scope="request">
+			<forward name="success" path="/WEB-INF/jsp/InfoUpdate.jsp" />
+		</action>
+		
+		<action path="/DeleteInfo" type="com.gui.action.DeleteInfoAction" scope="request">
+		</action>
+		
+		<action path="/Logout" type="com.gui.forward.Logout" scope="request">
 		</action>
 	</action-mappings>
 </struts-config>

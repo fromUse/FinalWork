@@ -7,6 +7,8 @@ window.onload = function() {
 	var flag = false;
 	var passflag = false;
 	$('#login_btn').bind('click', function() {
+		checkPasswd();
+		checkName();
 		if ($('input:text').val().length < 1) {
 			alert('登陆嘚用账户吧....');
 			return;

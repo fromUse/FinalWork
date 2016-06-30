@@ -10,6 +10,7 @@ import com.gui.dao.InfomationDao;
 import com.gui.entity.Infomation;
 import com.gui.entity.User;
 import com.gui.utils.LocalSessionUtils;
+import com.sun.mail.util.QEncoderStream;
 
 public class InfomationDaoImpl implements InfomationDao {
 
@@ -47,7 +48,10 @@ public class InfomationDaoImpl implements InfomationDao {
 	public void deletInfo(Infomation info) {
 		Session session = LocalSessionUtils.getSession();
 
-		session.delete(info);
+		Query hql = session.createQuery("delete from Infomation where id=?");
+		hql.setParameter(0, info.getId());
+		hql.executeUpdate();
+		//session.delete(info);
 		LocalSessionUtils.commit();
 
 	}
